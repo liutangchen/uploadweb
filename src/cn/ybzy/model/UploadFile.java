@@ -9,6 +9,8 @@ public class UploadFile {
 	private String fileSize;
 	private String savePath;
 	private Date saveTime;
+	private String fileDesc;
+	private String saveName;
 
 	public int getId() {
 		return id;
@@ -58,11 +60,28 @@ public class UploadFile {
 		this.saveTime = saveTime;
 	}
 
+	public String getFileDesc() {
+		return fileDesc;
+	}
+
+	public void setFileDesc(String fileDesc) {
+		this.fileDesc = fileDesc;
+	}
+
+	public String getSaveName() {
+		return saveName;
+	}
+
+	public void setSaveName(String saveName) {
+		this.saveName = saveName;
+	}
+
 	public UploadFile() {
 		super();
 	}
 
-	public UploadFile(int id, String oldFileName, String fileType, String fileSize, String savePath, Date saveTime) {
+	public UploadFile(int id, String oldFileName, String fileType, String fileSize, String savePath, Date saveTime,
+			String fileDesc, String saveName) {
 		super();
 		this.id = id;
 		this.oldFileName = oldFileName;
@@ -70,11 +89,15 @@ public class UploadFile {
 		this.fileSize = fileSize;
 		this.savePath = savePath;
 		this.saveTime = saveTime;
+		this.fileDesc = fileDesc;
+		this.saveName = saveName;
 	}
 
 	@Override
 	public String toString() {
 		return "UploadFile [id=" + id + ", oldFileName=" + oldFileName + ", fileType=" + fileType + ", fileSize="
-				+ fileSize + ", savePath=" + savePath + ", saveTime=" + saveTime + "]";
+				+ fileSize + ", savePath=" + savePath + ", saveTime=" + saveTime + ", fileDesc=" + fileDesc
+				+ ", saveName=" + saveName + "]";
 	}
+
 }
